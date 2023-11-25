@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Search Page</title>
+    <style>
+        body {
+            background-color: #8A9383;
+        }
+    .container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; 
+    margin: 0 auto; 
+    margin-top: 50px; 
+}
+form {
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color:#D6DBD2;
+    color: #fff;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+    </style>
 </head>
 <body>
-    <title>Search Page</title>
+    <span class="container">
     <div class="content">
-        <h1 style="text-align: center">Search</h1>
+        <h2 style="text-align: center; color:#232422;"><b>Search weather, Here </b></h2>
 
         <div class="form">
             <form action="/weatherapp" method="POST">
@@ -15,5 +43,6 @@
             </form>
         </div>
     </div>
+</span>
 </body>
 </html>

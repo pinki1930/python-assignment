@@ -1,71 +1,34 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Weather Info</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #8A9383;
+            margin: 50px;
         }
 
         .container {
-            background-color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #D6DBD2;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin: 5px 0;
-            color: #555;
-        }
-
-        .temperature {
-            font-size: 2em;
-            font-weight: bold;
-            color: #007BFF;
-        }
-
-        .weather-description {
-            font-style: italic;
-        }
-
-        /* Conditional styling based on weather description */
-        .weather-sunny {
-            color: #FFD700; /* Gold color for sunny weather */
-        }
-
-        .weather-rainy {
-            color: #4682B4; /* Steel Blue color for rainy weather */
-        }
-
-        .weather-cloudy {
-            color: #778899; /* Light Slate Gray color for cloudy weather */
         }
     </style>
-    <title>Weather Data</title>
 </head>
 <body>
     <div class="container">
         <h1>{{ data['name'] }} Weather</h1>
-        <p class="temperature">Temperature: {{ data['main']['temp'] }}°C</p>
-        <p class="weather-description">
-            Weather: <span class="weather-{{ data['weather'][0]['main'].toLowerCase() }}">{{ data['weather'][0]['description'] }}</span>
-        </p>
+        <p>Temperature: {{ data['main']['temp'] }}°C</p>
+        <p>Weather: {{ data['weather'][0]['description'] }}</p>
         <p>Wind Speed: {{ data['wind']['speed'] }} m/s</p>
     </div>
 </body>
 </html>
-
